@@ -1,9 +1,9 @@
 <h1>Home Page:course information</h1>
 
-<% if user_signed_in? %>
- 	Logged index as <strong><%= current_user.email %></strong>
- 
-
+<% if user_signed_in?  && current_user.email == 'hhhhbk605088@gmail.com'%>
+ 	<h3>i am a coach</h3>
+<% elsif user_signed_in? %>  	
+	<h3>i am a student</h3>
 <% else %> 
 	<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>		
 <% end %> 
